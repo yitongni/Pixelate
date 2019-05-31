@@ -1,19 +1,16 @@
 function addRow() {
     let table = document.getElementById("table");
-    let td = table.getElementsByTagName("td");
-    let td = table.getElementsByTagName("td");
     var row = table.insertRow(table.size);
-    var cell1 = row.insertCell(0);
-    cell1.bgColor = "Blue"
-    cell1.style.width = "50px"
-    cell1.style.height = "50px"
+    row.insertCell(0);
 
+    var cells = table.rows[0].cells;
+
+
+    //let td = table.getElementsByTagName("td");
+    // let td = table.getElementsByTagName("td");
     //for each column - add a row
-    for (let i = 0; i < td.length; i++) {
-        var cell1 = td[i].insertCell(0);
-        cell1.bgColor = "Blue"
-        cell1.style.width = "50px"
-        cell1.style.height = "50px"
+    for (let i = 1; i < cells.length; i++) {
+        row.insertCell(0);
     }
 
 
