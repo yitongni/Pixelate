@@ -1,9 +1,21 @@
-#table{
-    background-color: aqua;
+html{
+    background-color: black;
 }
+body{
+    background-color: black;
+}
+
+p{
+    color: white;
+}
+
+#table{}
 
 tr{
 }
 
 td{
+    background-color: gray;
+    height: 50px;
+    width: 50px;
 }
