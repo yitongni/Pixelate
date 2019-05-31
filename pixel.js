@@ -22,11 +22,12 @@ function addColumn() {
     for (let i = 0; i < tr.length; i++) {
         var cell = tr[i].insertCell(0);
     }
+}
 
-
-    // let row = table.insertColumn(table.columns.size);
-    // let cell = column.insertCell(0);
-    // cell.bgColor = "Blue"
-    // cell.style.width = "50px"
-    // cell.style.height = "50px"
+function deleteColumn(){
+    let table = document.getElementById("table");
+    for(let i=0; i<table.rows.length; i++){
+        let tr = table.rows[i]
+        tr.deleteCell(tr.length-1);
+    }
 }
