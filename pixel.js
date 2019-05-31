@@ -13,7 +13,7 @@ function addRow() {
 
 function deleteRow(){
     let table=document.getElementById("table");
-    var row = table.deleteRow(table.rows.length-1);
+    table.deleteRow(table.rows.length-1);
 }
 
 function addColumn() {
@@ -21,9 +21,6 @@ function addColumn() {
     let tr = table.getElementsByTagName("tr");
     for (let i = 0; i < tr.length; i++) {
         var cell = tr[i].insertCell(0);
-        cell.bgColor = "Blue"
-        cell.style.width = "50px"
-        cell.style.height = "50px"
     }
 
 
