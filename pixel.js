@@ -26,4 +26,13 @@ function addColumn() {
         let cell = tr.insertCell(tr.length);
         cell.addEventListener("click", function () { cell.style.backgroundColor = "yellow"; });
     }
+
+}
+
+function deleteColumn() {
+    let table = document.getElementById("table");
+    for (let i = 0; i < table.rows.length; i++) {
+        let tr = table.rows[i]
+        tr.deleteCell(tr.length - 1);
+    }
 }
