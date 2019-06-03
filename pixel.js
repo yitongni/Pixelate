@@ -1,9 +1,14 @@
+function changeColorOfCell(cell){
+    cell.style.backgroundColor = "yellow"; 
+}
+
+
 function changeColorOnHover(){
     let table = document.getElementById("table");
     for (let i = 0; i < table.rows.length; i++) {
         for(let j=0; j<table.rows[i].cells.length; j++){
             let cell = table.rows[i].cells[j];
-            cell.addEventListener("mouseover", function () { cell.style.backgroundColor = "yellow"; });
+            cell.addEventListener("mouseover", function () { changeColorOfCell(cell) });
         }
     }
 }
@@ -22,7 +27,7 @@ function addRow() {
     let table = document.getElementById("table");
     let row = table.insertRow(table.size);
     let icell = row.insertCell(0);
-    icell.addEventListener("click", function () { icell.style.backgroundColor = "yellow"; });
+    icell.addEventListener("click", function () { changeColorOfCell(icell) });
     //icell.addEventListener("mouseover", function () { icell.style.backgroundColor = "yellow"; });
     icell.addEventListener("mousedown", function () {changeColorOnHover()});
     icell.addEventListener("mouseup", function () {removeOnHover()});
@@ -32,7 +37,7 @@ function addRow() {
     //for each column - add a row
     for (let i = 1; i < cells.length; i++) {
         let cell = row.insertCell(0);
-        cell.addEventListener("click", function () { cell.style.backgroundColor = "yellow"; });
+        cell.addEventListener("click", function () { changeColorOfCell(cell) });
         //cell.addEventListener("mouseover", function () { cell.style.backgroundColor = "yellow"; });
         cell.addEventListener("mousedown", function () {changeColorOnHover()});
         cell.addEventListener("mouseup", function () {removeOnHover()});
@@ -50,7 +55,7 @@ function addColumn() {
     for (let i = 0; i < table.rows.length; i++) {
         let tr = table.rows[i];
         let cell = tr.insertCell(tr.length);
-        cell.addEventListener("click", function () { cell.style.backgroundColor = "yellow"; });
+        cell.addEventListener("click", function () { changeColorOfCell(icell) });
         //cell.addEventListener("mouseover", function () { cell.style.backgroundColor = "yellow"; });
         cell.addEventListener("mousedown", function () {changeColorOnHover()});
         cell.addEventListener("mouseup", function () {removeOnHover()});
