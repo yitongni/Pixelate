@@ -1,5 +1,5 @@
 function changeColorOfCell(cell){
-    cell.style.backgroundColor = "yellow"; 
+    cell.style.backgroundColor = document.getElementById("Colors").value;
 }
 
 
